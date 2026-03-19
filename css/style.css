@@ -781,3 +781,105 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   COMING SOON SECTION
+   Remove once app is registered on Google Play.
+   ═══════════════════════════════════════════════════════════════ */
+.coming-soon {
+  position: relative;
+  background: linear-gradient(200deg, #0D1F07 0%, #1A3509 50%, #2D5016 100%);
+  padding: var(--space-xxl) var(--space-lg);
+  text-align: center;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .coming-soon { padding: var(--space-xl) var(--space-sm); }
+}
+
+/* Ambient orbs — same technique as hero */
+.cs-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.cs-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  will-change: transform;
+}
+
+.cs-orb-a {
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, #2D5016 0%, transparent 70%);
+  top: -120px; left: -80px;
+  opacity: 0.5;
+  animation: drift-a 18s ease-in-out infinite;
+}
+
+.cs-orb-b {
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, #C9A84C 0%, transparent 70%);
+  bottom: -80px; right: -60px;
+  opacity: 0.12;
+  animation: drift-b 22s ease-in-out infinite;
+}
+
+.cs-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.cs-badge {
+  display: inline-block;
+  background: rgba(201, 168, 76, 0.15);
+  border: 1px solid rgba(201, 168, 76, 0.4);
+  border-radius: var(--radius-pill);
+  padding: 8px 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-gold);
+  letter-spacing: 0.04em;
+  margin-bottom: 32px;
+}
+
+.cs-heading {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 52px;
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin-bottom: 28px;
+}
+
+@media (max-width: 768px) {
+  .cs-heading { font-size: 36px; }
+}
+
+.cs-sub {
+  font-size: 17px;
+  color: var(--color-text-on-dark-secondary);
+  line-height: 1.7;
+  margin-bottom: 48px;
+}
+
+.cs-sub a {
+  color: var(--color-gold);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.4);
+  transition: border-color 0.2s;
+}
+
+.cs-sub a:hover { border-color: var(--color-gold); }
+
+.cs-footnote {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.3);
+  font-family: 'Inter', sans-serif;
+}
