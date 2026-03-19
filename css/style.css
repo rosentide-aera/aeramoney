@@ -139,31 +139,15 @@ body {
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
   text-decoration: none;
 }
 
-.nav-logo-mark {
-  width: 28px;
-  height: 28px;
-  background: linear-gradient(135deg, #C9A84C 0%, #A88930 100%);
-  border-radius: 7px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 16px;
-  font-weight: 700;
-  color: #0D1F07;
+.nav-logo-img {
+  height: 40px;
+  width: auto;
+  border-radius: 8px;
+  display: block;
   flex-shrink: 0;
-}
-
-.nav-wordmark {
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 18px;
-  color: var(--color-white);
-  letter-spacing: -0.01em;
 }
 
 .nav-cta {
@@ -753,29 +737,14 @@ body {
 .footer-brand {
   display: flex;
   align-items: center;
-  gap: 10px;
 }
 
-.footer-logo-mark {
-  width: 24px;
-  height: 24px;
-  background: linear-gradient(135deg, #C9A84C 0%, #A88930 100%);
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 13px;
-  font-weight: 700;
-  color: #0D1F07;
+.footer-logo-img {
+  height: 36px;
+  width: auto;
+  border-radius: 7px;
+  display: block;
   flex-shrink: 0;
-}
-
-.footer-wordmark {
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  color: var(--color-white);
 }
 
 .footer-links {
