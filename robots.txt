@@ -2,13 +2,30 @@ User-agent: *
 Allow: /
 
 # Explicitly allow AI crawlers for AEO (Answer Engine Optimization)
+# OpenAI / ChatGPT
 User-agent: GPTBot
 Allow: /
 
+# Perplexity
 User-agent: PerplexityBot
 Allow: /
 
+# Anthropic / Claude
 User-agent: ClaudeBot
+Allow: /
+
+# Google Gemini / AI Overviews
+User-agent: Google-Extended
+Allow: /
+
+# xAI / Grok
+User-agent: GrokBot
+Allow: /
+
+User-agent: xAI-Grok
+Allow: /
+
+User-agent: Grok-DeepSearch
 Allow: /
 
 Sitemap: https://aeramoney.com/sitemap.xml
