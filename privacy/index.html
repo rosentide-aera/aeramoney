@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Aera</title>
+  <meta name="description" content="Aera Privacy Policy — Version 1.0, effective March 9, 2026." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green-dark:  #1C3A0F;
+      --green-brand: #2D5016;
+      --green-tint:  #F2F8EE;
+      --bg:          #FAFDF8;
+      --white:       #FFFFFF;
+      --text:        #1A1A1A;
+      --text-muted:  #5A6472;
+      --border:      #DDE8D5;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      background: var(--green-dark);
+      padding: 0 2rem;
+      height: 60px;
+      display: flex;
+      align-items: center;
+    }
+    .wordmark {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -0.02em;
+      text-decoration: none;
+    }
+
+    .page-header {
+      background: var(--green-dark);
+      color: var(--white);
+      padding: 3rem 2rem 2.5rem;
+      text-align: center;
+    }
+    .page-header h1 { font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .page-header .meta { font-size: 0.875rem; opacity: 0.7; }
+
+    main {
+      flex: 1;
+      max-width: 760px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    /* Summary card */
+    .summary-card {
+      background: var(--green-tint);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 2.5rem;
+    }
+    .summary-card h2 {
+      font-size: 0.8125rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--green-brand);
+      margin-bottom: 1rem;
+    }
+    .summary-card ul { list-style: none; }
+    .summary-card li {
+      display: flex;
+      gap: 0.75rem;
+      font-size: 0.9375rem;
+      line-height: 1.55;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .summary-card li:last-child { border-bottom: none; }
+    .summary-card li::before { content: "✓"; color: var(--green-brand); font-weight: 700; flex-shrink: 0; }
+
+    /* Sections */
+    section { margin-bottom: 2.75rem; }
+    h2.section-title {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.25rem;
+    }
+    h3 {
+      font-size: 0.9375rem;
+      font-weight: 700;
+      color: var(--text);
+      margin: 1.25rem 0 0.5rem;
+    }
+    p {
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      color: var(--text);
+      margin-bottom: 0.75rem;
+    }
+    ul, ol {
+      margin: 0.5rem 0 0.75rem 1.5rem;
+    }
+    li {
+      font-size: 0.9375rem;
+      line-height: 1.65;
+      margin-bottom: 0.25rem;
+      color: var(--text);
+    }
+    strong { font-weight: 700; }
+
+    /* Callout */
+    .callout {
+      background: var(--green-tint);
+      border-left: 3px solid var(--green-brand);
+      border-radius: 0 6px 6px 0;
+      padding: 0.875rem 1rem;
+      margin: 1rem 0;
+      font-size: 0.9375rem;
+      line-height: 1.6;
+    }
+
+    /* Service table */
+    .service-block {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1rem;
+    }
+    .service-block h3 { margin-top: 0; color: var(--green-brand); }
+    .service-block p { margin-bottom: 0.25rem; }
+    .service-block .label { font-size: 0.8125rem; color: var(--text-muted); font-weight: 600; }
+
+    a { color: var(--green-brand); }
+    a:hover { text-decoration: underline; }
+
+    footer {
+      background: var(--green-dark);
+      color: rgba(255,255,255,0.7);
+      padding: 1.25rem 2rem;
+      text-align: center;
+      font-size: 0.8125rem;
+    }
+    footer a { color: rgba(255,255,255,0.85); text-decoration: none; margin: 0 0.625rem; }
+    footer a:hover { text-decoration: underline; }
+    .footer-links { margin-bottom: 0.5rem; }
+    .footer-copy { opacity: 0.55; font-size: 0.75rem; }
+  </style>
+</head>
+<body>
+
+  <nav><a class="wordmark" href="/">Aera</a></nav>
+
+  <div class="page-header">
+    <h1>Privacy Policy</h1>
+    <div class="meta">Version 1.0 &nbsp;·&nbsp; Effective March 9, 2026 &nbsp;·&nbsp; Last Updated March 13, 2026</div>
+  </div>
+
+  <main>
+
+    <p>Rosentide Inc. ("we," "us," or "our"), incorporated in Canada under the Canada Business Corporations Act with registered office in Quebec, operates Aera, a personal finance management application ("the App"). This Privacy Policy describes how we collect, use, and protect your information when you use the App.</p>
+
+    <!-- Summary -->
+    <div class="summary-card">
+      <h2>Summary</h2>
+      <ul>
+        <li><strong>Your financial data stays on your device.</strong> All transactions, account balances, budgets, goals, and investment data are encrypted on your device using AES-256 encryption and are not transmitted to our servers.</li>
+        <li><strong>We collect anonymous analytics only.</strong> We use Analytics to understand which features are popular and Crashlytics to fix bugs. These services collect anonymous usage data that cannot identify you or your financial information.</li>
+        <li><strong>We do not sell your data.</strong> We have never sold, rented, or traded your personal or financial information to third parties. If this ever changes, it will require your explicit opt-in consent.</li>
+        <li><strong>You are in control.</strong> You can opt out of analytics, delete your account, or request a copy of your data at any time.</li>
+      </ul>
+    </div>
+
+    <!-- 2. What We Collect -->
+    <section>
+      <h2 class="section-title">1. What We Collect</h2>
+
+      <h3>1.1 Information Stored on Your Device Only</h3>
+      <p>The following data is stored on your device, encrypted using AES-256 encryption via SQLCipher. We do not have access to this data:</p>
+      <ul>
+        <li>Financial transactions (amounts, descriptions, categories, dates)</li>
+        <li>Account information (balances, account names, account types)</li>
+        <li>Budget configurations and spending data</li>
+        <li>Savings goals and contributions</li>
+        <li>Investment holdings and portfolio data</li>
+        <li>Subscription and recurring bill tracking</li>
+        <li>Lending and borrowing records</li>
+      </ul>
+
+      <h3>1.2 Information We Collect</h3>
+
+      <p><strong>Firebase Analytics (anonymous usage data):</strong></p>
+      <ul>
+        <li>Which screens you visit (screen view counts)</li>
+        <li>Which features you use (e.g., number of transactions added, budgets created)</li>
+        <li>An anonymous identifier (not linked to your identity)</li>
+        <li>General device information: country, currency preference, theme mode</li>
+        <li>App version, device model, and operating system version</li>
+      </ul>
+
+      <p><strong>Firebase Crashlytics (crash reports):</strong></p>
+      <ul>
+        <li>Technical stack traces when the app crashes</li>
+        <li>Device model, operating system version, and app version</li>
+        <li>No personal data or financial data is included</li>
+      </ul>
+
+      <p><strong>Firebase Authentication:</strong></p>
+      <ul>
+        <li>Email address (for account creation and login)</li>
+        <li>Authentication tokens (encrypted)</li>
+        <li>Google account identifier (if you sign in with Google)</li>
+      </ul>
+
+      <h3>1.3 Information We Do NOT Collect</h3>
+      <ul>
+        <li>Transaction amounts, descriptions, or categories</li>
+        <li>Account balances or account names</li>
+        <li>Investment holdings, values, or portfolio performance</li>
+        <li>Personal financial information of any kind</li>
+        <li>Contacts, photos, or other device data not required for App functionality</li>
+      </ul>
+    </section>
+
+    <!-- 3. How We Use Data -->
+    <section>
+      <h2 class="section-title">2. How We Use Data</h2>
+      <p>We use anonymous analytics data to:</p>
+      <ul>
+        <li>Understand which features are most popular and which need improvement</li>
+        <li>Identify areas of the App where users experience difficulty</li>
+        <li>Prioritize development of new features based on usage patterns</li>
+        <li>Monitor App stability and performance</li>
+      </ul>
+      <p>We use crash reports to:</p>
+      <ul>
+        <li>Identify and fix bugs that cause the App to crash</li>
+        <li>Improve App stability across different devices and operating system versions</li>
+        <li>Prioritize bug fixes based on frequency and severity</li>
+      </ul>
+      <h3>What We Do NOT Use Data For</h3>
+      <ul>
+        <li>We do not currently use your data for advertising or ad targeting</li>
+        <li>We do not currently build user profiles for marketing purposes</li>
+        <li>We have never sold, rented, or traded your data to any third party</li>
+        <li>We do not use your data for credit decisions, insurance underwriting, or employment screening</li>
+        <li>We do not use analytics data to identify individual users or their financial behavior</li>
+        <li>If any of these practices change in the future, we will update this Privacy Policy and require your renewed consent before any new processing begins</li>
+      </ul>
+    </section>
+
+    <!-- 4. Third-Party Services -->
+    <section>
+      <h2 class="section-title">3. Third-Party Services</h2>
+      <p>The App uses the following third-party services:</p>
+
+      <div class="service-block">
+        <h3>Firebase Analytics (Google LLC)</h3>
+        <p><span class="label">Purpose:</span> Anonymous usage analytics</p>
+        <p><span class="label">Data processed:</span> Anonymous screen views, feature usage counts, device information</p>
+        <p><span class="label">Data location:</span> Google servers (primarily United States)</p>
+      </div>
+      <div class="service-block">
+        <h3>Firebase Crashlytics (Google LLC)</h3>
+        <p><span class="label">Purpose:</span> Crash reporting and stability monitoring</p>
+        <p><span class="label">Data processed:</span> Stack traces, device model, OS version, app version</p>
+        <p><span class="label">Data location:</span> Google servers (primarily United States)</p>
+      </div>
+      <div class="service-block">
+        <h3>Firebase Cloud Functions (Google LLC)</h3>
+        <p><span class="label">Purpose:</span> Investment and market price data retrieval via third-party providers</p>
+        <p><span class="label">Data processed:</span> Stock ticker symbols and currency pair codes (no personal or financial data)</p>
+        <p><span class="label">Data location:</span> Google servers (us-central1)</p>
+      </div>
+      <div class="service-block">
+        <h3>Firebase Authentication (Google LLC)</h3>
+        <p><span class="label">Purpose:</span> User account creation and authentication</p>
+        <p><span class="label">Data processed:</span> Email address, authentication tokens</p>
+        <p><span class="label">Data location:</span> Google servers (primarily United States)</p>
+      </div>
+      <div class="service-block">
+        <h3>Third-Party Market Data and Currency Providers</h3>
+        <p><span class="label">Purpose:</span> Investment price data and currency exchange rates</p>
+        <p><span class="label">Data processed:</span> Stock ticker symbols and currency pair codes only (no personal or financial data)</p>
+      </div>
+      <p>All third-party services are subject to their respective privacy policies and data processing agreements. We select services that maintain industry-standard security practices and do not use your data for their own advertising purposes.</p>
+    </section>
+
+    <!-- 5. Data Retention -->
+    <section>
+      <h2 class="section-title">4. Data Retention</h2>
+      <ul>
+        <li><strong>Financial data (on device):</strong> Until you delete it or uninstall the App. Stored and encrypted locally; not accessed by our servers under the current architecture.</li>
+        <li><strong>Firebase Analytics data:</strong> 14 months (Google's default retention, anonymized)</li>
+        <li><strong>Crashlytics crash logs:</strong> 90 days (automatically purged by Google)</li>
+        <li><strong>Authentication credentials:</strong> Until account deletion</li>
+        <li><strong>Consent records:</strong> 7 years after account deletion (legal compliance requirement)</li>
+        <li><strong>Preferences and settings:</strong> Until you delete them or uninstall the App (stored on device only)</li>
+      </ul>
+    </section>
+
+    <!-- 6. Your Rights -->
+    <section>
+      <h2 class="section-title">5. Your Rights</h2>
+
+      <h3>Opt Out of Analytics</h3>
+      <div class="callout">You can disable anonymous analytics collection at any time in <strong>Settings &gt; About &gt; Data Policy</strong> by toggling off "Anonymous Usage Analytics." When disabled, no analytics events are sent to Firebase. Crash reporting (device type, OS version, and technical error data — no personal or financial information) operates independently and remains active to maintain app stability.</div>
+
+      <h3>Delete Your Account</h3>
+      <p>You can permanently delete your account and all associated data in <strong>Settings &gt; About &gt; Delete Account</strong>. This will permanently delete your Firebase Authentication account, all locally stored financial data, and all preferences and settings. Anonymized analytics data (which cannot identify you) and consent records (required for legal compliance) will be retained.</p>
+
+      <h3>Request a Copy of Your Data</h3>
+      <p>Your data resides locally on your device; we do not currently have access to it.</p>
+
+      <h3>Correct Your Information</h3>
+      <p>You can update your profile information directly in the App through <strong>Navigation Drawer &gt; User Profile</strong>.</p>
+
+      <h3>Withdraw Consent</h3>
+      <p>You can withdraw your consent for analytics collection at any time. Withdrawing consent does not affect the lawfulness of processing based on consent before its withdrawal.</p>
+
+      <h3>Lodge a Complaint</h3>
+      <p>If you believe your privacy rights have been violated, you may lodge a complaint with your local data protection authority.</p>
+    </section>
+
+    <!-- 7. AI Features -->
+    <section>
+      <h2 class="section-title">6. AI Features</h2>
+      <p>The App includes AI-powered features that run entirely on your device:</p>
+      <ul>
+        <li>Smart categorization: Suggests transaction categories based on description text</li>
+        <li>Natural language entry: Parses text like "coffee at Starbucks $5" into transaction fields</li>
+        <li>Merchant name cleanup: Simplifies complex merchant names</li>
+        <li>Smart search: Interprets natural language search queries</li>
+        <li>Bill detection: Identifies recurring transactions that may be subscriptions</li>
+      </ul>
+      <p>These features process your data locally on your device. No financial data is sent to external servers for these features.</p>
+      <p>AI features are experimental and may produce inaccurate results. All AI suggestions can be reviewed and corrected by you before being applied. You should not rely solely on AI features for financial decisions.</p>
+      <p>You can enable or disable individual AI features in <strong>Settings &gt; AI &amp; Intelligence</strong>.</p>
+    </section>
+
+    <!-- 8. Future Features -->
+    <section>
+      <h2 class="section-title">7. Future Features</h2>
+      <p>As the App evolves, we may introduce new features that involve additional data processing. When such features are introduced:</p>
+      <ul>
+        <li>They will always require your explicit opt-in consent before any new data processing begins</li>
+        <li>This Privacy Policy will be updated to describe the new data practices</li>
+        <li>You will be notified of material changes through the App</li>
+        <li>Material changes will require your renewed consent via clickwrap acceptance</li>
+        <li>Core financial tracking functionality is designed to work without cloud features</li>
+      </ul>
+    </section>
+
+    <!-- 9. International Data Transfers -->
+    <section>
+      <h2 class="section-title">8. International Data Transfers</h2>
+      <p>Firebase services (Analytics, Crashlytics, Cloud Functions, Authentication) process data on servers located primarily in the United States. These transfers are governed by:</p>
+      <ul>
+        <li>Google's Data Processing Terms, including Standard Contractual Clauses (SCCs) for transfers from the UK/EEA</li>
+        <li>Google's SOC 2 Type II and ISO 27001 certifications</li>
+      </ul>
+      <p>By using the App, you acknowledge that anonymous analytics data and crash reports may be processed in the United States. Under the current architecture, personal financial data remains on your device and is not transferred internationally.</p>
+    </section>
+
+    <!-- 10. Children's Privacy -->
+    <section>
+      <h2 class="section-title">9. Children's Privacy</h2>
+      <p>The App is not designed for or directed at individuals under the age of 18. We do not knowingly collect personal information from children. If you are a parent or guardian and believe your child has provided us with personal information, please contact us at <a href="mailto:support@aeramoney.com">support@aeramoney.com</a> and we will take steps to delete such information.</p>
+    </section>
+
+    <!-- 11. Legal Basis -->
+    <section>
+      <h2 class="section-title">10. Legal Basis for Processing</h2>
+      <p>For users in jurisdictions that require a legal basis for data processing (including the UK and EEA):</p>
+      <ul>
+        <li><strong>Anonymous analytics:</strong> Legitimate interests — understanding feature usage to improve the App, with minimal privacy impact due to anonymization</li>
+        <li><strong>Crash reporting:</strong> Legitimate interests — maintaining App stability and fixing bugs</li>
+        <li><strong>Authentication:</strong> Contract performance — required to provide the account-based service you requested</li>
+        <li><strong>Consent record keeping:</strong> Legal obligation — required to demonstrate compliance with data protection laws</li>
+        <li><strong>On-device data encryption:</strong> Contract performance — core App functionality you requested</li>
+      </ul>
+      <p>You may object to processing based on legitimate interests at any time by opting out of analytics or by contacting us.</p>
+    </section>
+
+    <!-- 12. Changes -->
+    <section>
+      <h2 class="section-title">11. Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time to reflect changes in our practices, new features, or legal requirements.</p>
+      <p>For material changes (changes to what data we collect, how we use it, or who we share it with), we will notify you through the App and require your renewed consent via clickwrap acceptance before the changes take effect.</p>
+      <p>For non-material changes (clarifications, formatting, updated contact information), we will update this policy and note the "Last Updated" date.</p>
+      <p>Previous versions of this policy will be available upon request.</p>
+    </section>
+
+    <!-- 13. Contact -->
+    <section>
+      <h2 class="section-title">12. Contact Us</h2>
+      <p>If you have questions about this Privacy Policy or our data practices:</p>
+      <p><strong>Email:</strong> <a href="mailto:support@aeramoney.com">support@aeramoney.com</a></p>
+      <p>Rosentide Inc.<br>Quebec, Canada</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="/privacy/">Privacy Policy</a>·
+      <a href="/terms/">Terms of Service</a>·
+      <a href="/delete/">Data Deletion</a>·
+      <a href="mailto:support@aeramoney.com">Contact</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 Rosentide Inc. All rights reserved.</div>
+  </footer>
+
+</body>
+</html>
