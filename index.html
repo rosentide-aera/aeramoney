@@ -35,7 +35,7 @@
     "name": "Aera — Budget & Net Worth Tracker",
     "description": "Aera is a free, privacy-first personal finance app for Android. Track expenses manually, monitor net worth, watch investments, and manage multiple currencies — all offline with AES-256 encryption. No bank connection required. No data selling.",
     "url": "https://aeramoney.com",
-    "downloadUrl": "https://play.google.com/store/apps/details?id=com.rosentide.aera",
+    "downloadUrl": "https://play.google.com/store/apps/details?id=com.aera.android",
     "operatingSystem": "ANDROID",
     "applicationCategory": "FinanceApplication",
     "softwareVersion": "1.0.0",
@@ -84,42 +84,86 @@
 <body>
 
   <!-- ═══════════════════════════════════════════════════════════ -->
-  <!--  COMING SOON — full page lockdown                           -->
-  <!--  TO RESTORE: delete this entire section and uncomment the  -->
-  <!--  RESTORE block further below.                              -->
+  <!--  NAVIGATION                                                 -->
   <!-- ═══════════════════════════════════════════════════════════ -->
-  <section class="cs-fullpage">
-    <div class="cs-bg" aria-hidden="true">
-      <div class="cs-orb cs-orb-a"></div>
-      <div class="cs-orb cs-orb-b"></div>
-      <div class="cs-orb cs-orb-c"></div>
+  <nav class="site-nav" id="site-nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo" aria-label="Aera home">
+        <img src="/assets/logo/aera-logo-fg.webp" alt="Aera" class="nav-logo-img" width="40" height="40" />
+      </a>
+      <a href="#download" class="nav-cta">Get the app</a>
     </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!--  HERO                                                       -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="hero">
+    <!-- Living animated background -->
+    <div class="hero-bg" aria-hidden="true">
+      <div class="orb orb-a"></div>
+      <div class="orb orb-b"></div>
+      <div class="orb orb-c"></div>
+      <div class="orb orb-d"></div>
+    </div>
+
+    <!-- Fine dot texture overlay -->
     <div class="hero-texture" aria-hidden="true"></div>
-    <div class="cs-center">
-      <img src="/assets/logo/aera-logo-fg.webp" alt="Aera" class="cs-logo" width="96" height="96" />
-      <p class="cs-wordmark">Aera</p>
-      <p class="cs-tagline">Coming soon.</p>
-      <a href="mailto:support@aeramoney.com" class="cs-contact">support@aeramoney.com</a>
+
+    <!-- Content grid -->
+    <div class="hero-content">
+
+      <!-- Left: text -->
+      <div class="hero-left">
+        <p class="hero-eyebrow">
+          <span>For Android · Free to download · Privacy-first</span>
+        </p>
+        <h1 class="hero-h1">Your finances,<br><span class="gold-shimmer">whole</span> at last.</h1>
+        <p class="hero-subtext">Aera brings your net worth, investments, and financial life into one private, encrypted space — built for people who take their money seriously.</p>
+        <a href="https://play.google.com/store/apps/details?id=com.aera.android" class="hero-cta" id="download" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M3.18 23.5c.28.16.6.17.88.04L15.93 12 4.06.46C3.78.33 3.46.34 3.18.5A1 1 0 002.5 1.4v21.2c0 .4.26.74.68.9z"/>
+            <path d="M18.5 14.23l-2.62-1.52-3.07 3.07 3.47 3.47 2.22-1.29a1.5 1.5 0 000-2.6v-.13z" opacity=".9"/>
+            <path d="M5.38 22.76L15.05 13.1l-2.62-2.62L4.06 18.8l1.32 3.96z" opacity=".7"/>
+            <path d="M5.38 1.24L12.43 8.3l2.62-2.62L5.38 1.24z" opacity=".7"/>
+            <path d="M15.93 12L18.5 9.77a1.5 1.5 0 000-2.6L16.28 5.9 13.05 9.12 15.93 12z" opacity=".9"/>
+          </svg>
+          Download on Google Play
+        </a>
+        <p class="hero-subnote">Available on Android · No credit card required</p>
+      </div>
+
+      <!-- Right: phone mockup -->
+      <div class="hero-right">
+        <div class="phone-wrapper">
+          <div class="phone-glow"></div>
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="screens-container">
+              <!-- Screenshots to be added when available -->
+              <div class="phone-placeholder">
+                <img src="/assets/logo/aera-logo-fg.webp" alt="Aera" style="width:64px; opacity:0.4; border-radius: 10px;" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!--
-  ═══════════════════════════════════════════════════════════════
-  FULL CONTENT — hidden until Google Play registration confirmed.
-  To restore: delete the COMING SOON section above and uncomment
-  everything between the START and END markers below.
-  ═══════════════════════════════════════════════════════════════
-  START RESTORE
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!--  WAVE DIVIDER                                               -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <div class="wave-divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#F8F6F1"/>
+    </svg>
+  </div>
 
-  [wave divider]
-    <div class="wave-divider" aria-hidden="true">
-      <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
-        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#F8F6F1"/>
-      </svg>
-    </div>
-  [/wave divider]
-
-  [features section]
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!--  FEATURES                                                   -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
   <section class="features" id="features">
     <div class="container">
       <div class="section-header animate-on-scroll">
@@ -134,7 +178,7 @@
             </svg>
           </div>
           <h3 class="feature-title">Know your real net worth</h3>
-          <p class="feature-body">Add any asset type - bank accounts, investments, loans, other assets, and other debts - and see your true net worth at one place.</p>
+          <p class="feature-body">Add any asset type — bank accounts, investments, loans, other assets, and other debts — and see your true net worth at one place.</p>
         </div>
         <div class="feature-card animate-on-scroll" style="transition-delay: 0.2s;">
           <div class="feature-icon" aria-hidden="true">
@@ -152,7 +196,7 @@
             </svg>
           </div>
           <h3 class="feature-title">Built for multiple currencies</h3>
-          <p class="feature-body">Earn in CAD, invest in USD, track assets globally. A unique currency system that gives you maximum freedom - natively, not as an afterthought.</p>
+          <p class="feature-body">Earn in CAD, invest in USD, track assets globally. A unique currency system that gives you maximum freedom — natively, not as an afterthought.</p>
         </div>
         <div class="feature-card animate-on-scroll" style="transition-delay: 0.4s;">
           <div class="feature-icon" aria-hidden="true">
@@ -166,9 +210,10 @@
       </div>
     </div>
   </section>
-  [/features section]
 
-  [brand strip]
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!--  BRAND STRIP                                                -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
   <section class="brand-strip animate-on-scroll">
     <div class="brand-strip-inner">
       <p class="brand-strip-line">
@@ -176,37 +221,39 @@
       </p>
     </div>
   </section>
-  [/brand strip]
 
-  [deeper message]
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!--  DEEPER MESSAGE                                             -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
   <section class="deeper-message">
     <div class="container container-narrow">
       <div class="quote-mark animate-on-scroll" aria-hidden="true">"</div>
       <p class="deeper-para animate-on-scroll">
-        Most people manage their money across a dozen different places - bank accounts here, investments there,
+        Most people manage their money across a dozen different places — bank accounts here, investments there,
         subscriptions quietly draining away, goals that never quite come together. The full picture never forms.
         Aera brings it all into one place: your net worth, accounts, assets, investments, debt, budgets, goals
-        and subscriptions - everything you own and everything you owe, in a single clear view. When you can
+        and subscriptions — everything you own and everything you owe, in a single clear view. When you can
         finally see it all, something changes. You stop leaking money. You start building wealth.
       </p>
-      <p class="brand-footnote animate-on-scroll">Built by Rosentide Inc. - Montreal, Canada</p>
+      <p class="brand-footnote animate-on-scroll">Built by Rosentide Inc. · Montreal, Canada</p>
     </div>
   </section>
-  [/deeper message]
 
-  [aeo faq]
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!--  AEO FAQ                                                    -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
   <section class="aeo-faq">
     <div class="container container-narrow">
       <h2 class="faq-heading">Common Questions</h2>
       <details class="faq-item">
         <summary>Is there a budgeting app that works offline?</summary>
-        <p>Yes - Aera works fully offline. You can track expenses, monitor your net worth,
+        <p>Yes — Aera works fully offline. You can track expenses, monitor your net worth,
         and manage budgets without an internet connection. Your data never needs to leave your device.</p>
       </details>
       <details class="faq-item">
         <summary>What is the best free net worth tracker for Android?</summary>
         <p>Aera is a free Android app that tracks your complete net worth across bank accounts,
-        investments, loans, assets, and debts - with no bank connection required.</p>
+        investments, loans, assets, and debts — with no bank connection required.</p>
       </details>
       <details class="faq-item">
         <summary>Is there a budgeting app that doesn't require linking a bank account?</summary>
@@ -215,19 +262,31 @@
       </details>
       <details class="faq-item">
         <summary>What is a good free alternative to YNAB or Mint?</summary>
-        <p>Aera is a free personal finance app for Android - no subscription required.
+        <p>Aera is a free personal finance app for Android — no subscription required.
         It covers budgeting, net worth, investments, goals, and subscriptions in one private app.</p>
       </details>
     </div>
   </section>
-  [/aeo faq]
 
-  END RESTORE
-  ═══════════════════════════════════════════════════════════════ -->
-
-  <!-- Footer: copyright only during lockdown -->
-  <footer class="cs-footer">
-    <p>&copy; 2026 Rosentide Inc.</p>
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!--  FOOTER                                                     -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a href="/" class="footer-brand" aria-label="Aera home">
+        <img src="/assets/logo/aera-logo-fg.webp" alt="Aera" class="footer-logo-img" width="36" height="36" />
+      </a>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="/privacy/">Privacy Policy</a>
+        <span aria-hidden="true"> · </span>
+        <a href="/terms/">Terms</a>
+        <span aria-hidden="true"> · </span>
+        <a href="/delete/">Data Deletion</a>
+        <span aria-hidden="true"> · </span>
+        <a href="mailto:support@aeramoney.com">Contact</a>
+      </nav>
+    </div>
+    <p class="footer-copy">&copy; 2026 Rosentide Inc. All rights reserved.</p>
   </footer>
 
   <!-- Scripts (deferred — non-blocking) -->

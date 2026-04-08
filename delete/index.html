@@ -172,7 +172,8 @@
     .del { color: #DC2626; font-weight: 600; font-size: 0.75rem; }
     .ret { color: var(--text-muted); font-weight: 600; font-size: 0.75rem; }
 
-    button[type="submit"] {
+    .email-cta {
+      display: block;
       width: 100%;
       padding: 0.875rem;
       background: var(--green-brand);
@@ -182,10 +183,19 @@
       font-size: 1rem;
       font-weight: 600;
       font-family: inherit;
-      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
       transition: background 0.15s;
+      margin-bottom: 0.75rem;
     }
-    button[type="submit"]:hover { background: var(--green-dark); }
+    .email-cta:hover { background: var(--green-dark); text-decoration: none; }
+
+    .email-hint {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
 
     .legal-note {
       font-size: 0.8rem;
@@ -230,55 +240,36 @@
       </p>
     </div>
 
-    <div class="divider">For former users only</div>
+    <div class="divider">Already uninstalled?</div>
 
-    <!-- Form -->
+    <!-- Email contact section -->
     <div class="form-section">
-      <h2>Request Data Deletion</h2>
+      <h2>Request Data Deletion by Email</h2>
       <p class="form-desc">
-        Use this form if you no longer have the app installed and want written confirmation that your data has been deleted. We'll respond within 30 days.
+        If you no longer have the app installed and want written confirmation that your data has been deleted, email us directly. We'll respond within 30 days.
       </p>
 
-      <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+      <a href="mailto:support@aeramoney.com?subject=Data%20Deletion%20Request&body=Please%20delete%20my%20Aera%20account%20and%20associated%20data.%20My%20account%20email%20address%20is%3A%20" class="email-cta">
+        Email support@aeramoney.com
+      </a>
 
-        <div class="field">
-          <label for="email">Email address used for your Aera account <span class="req">*</span></label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="you@example.com"
-            required
-            autocomplete="email"
-          />
-          <div class="field-hint">This must match the email you used to sign up. We use it to locate and confirm deletion of your authentication record.</div>
-        </div>
+      <p class="email-hint">Include the email address you used to sign up with Aera. We use it to locate and confirm deletion of your authentication record.</p>
 
-        <!-- Hidden fields for Formspree -->
-        <input type="hidden" name="_subject" value="Aera Data Deletion Request" />
-        <input type="hidden" name="_replyto" value="" />
-        <input type="text" name="_gotcha" style="display:none" />
+      <!-- What gets deleted -->
+      <div class="deletion-details">
+        <h3>What this request covers</h3>
+        <ul>
+          <li><span class="del">DELETED</span> Firebase Authentication account and login credentials</li>
+          <li><span class="del">DELETED</span> All financial data stored locally on your device (already removed when you uninstalled)</li>
+          <li><span class="del">DELETED</span> App preferences and settings</li>
+          <li><span class="ret">RETAINED</span> Anonymous, non-identifiable analytics data (cannot be linked to you)</li>
+          <li><span class="ret">RETAINED</span> Consent records for up to 7 years (legal compliance requirement)</li>
+        </ul>
+      </div>
 
-        <!-- What gets deleted -->
-        <div class="deletion-details">
-          <h3>What this request covers</h3>
-          <ul>
-            <li><span class="del">DELETED</span> Firebase Authentication account and login credentials</li>
-            <li><span class="del">DELETED</span> All financial data stored locally on your device (already removed when you uninstalled)</li>
-            <li><span class="del">DELETED</span> App preferences and settings</li>
-            <li><span class="ret">RETAINED</span> Anonymous, non-identifiable analytics data (cannot be linked to you)</li>
-            <li><span class="ret">RETAINED</span> Consent records for up to 7 years (legal compliance requirement)</li>
-          </ul>
-        </div>
-
-        <button type="submit">Submit Deletion Request</button>
-
-        <p class="legal-note">
-          By submitting, you confirm you are the account holder for the email address provided.
-          We process deletion requests within 30 days. See our <a href="/privacy/">Privacy Policy</a> for full details.
-        </p>
-
-      </form>
+      <p class="legal-note">
+        We process deletion requests within 30 days. See our <a href="/privacy/">Privacy Policy</a> for full details.
+      </p>
     </div>
 
   </main>
