@@ -294,8 +294,8 @@ body {
   margin-bottom: 28px;
   animation: fade-up 0.7s ease both;
   animation-delay: 0.25s;
-  font-variant-ligatures: no-common-ligatures;
-  font-feature-settings: "liga" 0, "clig" 0;
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0, "clig" 0, "dlig" 0, "calt" 0;
 }
 
 @media (max-width: 1024px) {
@@ -335,12 +335,13 @@ body {
 
 .play-badge-img {
   display: block;
-  height: 64px;
+  height: 52px;
   width: auto;
+  max-width: 180px;
 }
 
 @media (max-width: 768px) {
-  .play-badge-img { height: 56px; }
+  .play-badge-img { height: 46px; max-width: 160px; }
   .play-badge-link { margin: 0 auto 16px; }
 }
 
@@ -361,19 +362,19 @@ body {
 
 .phone-wrapper {
   position: relative;
-  width: 240px;
+  width: 215px;
   margin: 0 auto;
   animation: float 4s ease-in-out infinite;
 }
 
 @media (max-width: 768px) {
-  .phone-wrapper { width: 200px; }
+  .phone-wrapper { width: 185px; }
 }
 
 .phone-glow {
   position: absolute;
-  width: 260px;
-  height: 260px;
+  width: 240px;
+  height: 240px;
   background: radial-gradient(circle, rgba(45, 80, 22, 0.55) 0%, transparent 70%);
   top: 50%;
   left: 50%;
@@ -384,9 +385,9 @@ body {
 
 .phone-frame {
   width: 100%;
-  height: 496px;
+  height: clamp(360px, calc(100vh - 300px), 440px);
   background: #111;
-  border-radius: 38px;
+  border-radius: 36px;
   border: 8px solid #2A2A2A;
   box-shadow: var(--shadow-phone);
   overflow: hidden;
@@ -394,19 +395,7 @@ body {
 }
 
 @media (max-width: 768px) {
-  .phone-frame { height: 420px; border-radius: 32px; }
-}
-
-.phone-notch {
-  position: absolute;
-  top: 12px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 22px;
-  background: #000;
-  border-radius: 11px;
-  z-index: 10;
+  .phone-frame { height: clamp(300px, calc(100vh - 360px), 380px); border-radius: 30px; }
 }
 
 .screens-container {
