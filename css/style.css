@@ -385,9 +385,9 @@ body {
 
 .phone-frame {
   width: 100%;
-  height: clamp(360px, calc(100vh - 300px), 440px);
+  height: 496px;
   background: #111;
-  border-radius: 36px;
+  border-radius: 38px;
   border: 8px solid #2A2A2A;
   box-shadow: var(--shadow-phone);
   overflow: hidden;
@@ -395,7 +395,7 @@ body {
 }
 
 @media (max-width: 768px) {
-  .phone-frame { height: clamp(300px, calc(100vh - 360px), 380px); border-radius: 30px; }
+  .phone-frame { height: 420px; border-radius: 32px; }
 }
 
 .screens-container {
