@@ -356,7 +356,6 @@ body {
 .hero-right {
   display: flex;
   align-items: center;
-  justify-content: center;
   justify-content: flex-end;
   padding: var(--space-md) 24px var(--space-md) 0;
   overflow: visible;
