@@ -415,7 +415,7 @@ body {
   animation: screen-cycle 12s ease-in-out infinite;
 }
 
-.screen-1 { animation-delay: 0s; }
+.screen-1 { animation-delay: 0s; object-fit: contain; object-position: center top; }
 .screen-2 { animation-delay: 3s; }
 .screen-3 { animation-delay: 6s; }
 .screen-4 { animation-delay: 9s; }
