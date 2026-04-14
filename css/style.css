@@ -244,7 +244,7 @@ body {
   grid-template-columns: 55fr 45fr;
   gap: var(--space-lg);
   align-items: center;
-  max-width: 1200px;
+  max-width: 1400px;
   width: 100%;
   margin: 0 auto;
   padding: 120px var(--space-lg) var(--space-xl);
@@ -363,13 +363,13 @@ body {
 
 .phone-wrapper {
   position: relative;
-  width: 215px;
+  width: 250px;
   margin: 0 auto;
   animation: float 4s ease-in-out infinite;
 }
 
 @media (max-width: 768px) {
-  .phone-wrapper { width: 185px; }
+  .phone-wrapper { width: 215px; }
 }
 
 .phone-glow {
@@ -412,6 +412,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top center;
   opacity: 0;
   animation: screen-cycle 12s ease-in-out infinite;
 }
