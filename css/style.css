@@ -362,13 +362,13 @@ body {
 
 .phone-wrapper {
   position: relative;
-  width: 215px;
+  width: 246px;
   margin: 0 auto;
   animation: float 4s ease-in-out infinite;
 }
 
 @media (max-width: 768px) {
-  .phone-wrapper { width: 185px; }
+  .phone-wrapper { width: 210px; }
 }
 
 .phone-glow {
