@@ -320,30 +320,28 @@ body {
   .hero-subtext { font-size: 16px; margin: 0 auto 32px; }
 }
 
-.hero-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: linear-gradient(135deg, #C9A84C 0%, #B8941F 100%);
-  color: var(--color-hero-bg);
-  font-size: 16px;
-  font-weight: 600;
-  padding: 16px 32px;
-  border-radius: var(--radius-pill);
-  text-decoration: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+.play-badge-link {
+  display: inline-block;
   margin-bottom: 16px;
   animation: fade-up 0.7s ease both;
   animation-delay: 0.65s;
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
-.hero-cta:hover {
+.play-badge-link:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(201, 168, 76, 0.4);
+  filter: brightness(1.08);
+}
+
+.play-badge-img {
+  display: block;
+  height: 64px;
+  width: auto;
 }
 
 @media (max-width: 768px) {
-  .hero-cta { font-size: 15px; padding: 14px 28px; }
+  .play-badge-img { height: 56px; }
+  .play-badge-link { margin: 0 auto 16px; }
 }
 
 .hero-subnote {
