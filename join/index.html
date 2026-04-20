@@ -133,23 +133,6 @@
     }
 
     .hidden { display: none !important; }
-
-    /* Tally badge cover — badge is inside iframe, can't style it directly */
-    .tally-wrapper {
-      position: relative;
-    }
-
-    .tally-badge-cover {
-      position: absolute;
-      bottom: 6px;
-      right: 6px;
-      width: 52px;
-      height: 52px;
-      background: rgba(255, 255, 255, 0.05); /* match join-card background */
-      border-radius: 6px;
-      z-index: 10;
-      pointer-events: none;
-    }
   </style>
 </head>
 <body>
@@ -177,20 +160,17 @@
     <div class="join-card" id="ios-card">
       <h3>🍎 On iPhone?</h3>
       <p>Aera for iOS is coming soon. Join the waitlist — early signups get priority access when iOS launches.</p>
-      <div class="tally-wrapper">
-        <iframe
-          id="ios-form"
-          data-tally-src="https://tally.so/embed/ja9JNx?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-          loading="lazy"
-          width="100%"
-          height="240"
-          frameborder="0"
-          marginheight="0"
-          marginwidth="0"
-          title="iOS Waitlist">
-        </iframe>
-        <div class="tally-badge-cover"></div>
-      </div>
+      <iframe
+        id="ios-form"
+        data-tally-src="https://tally.so/embed/ja9JNx?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+        loading="lazy"
+        width="100%"
+        height="240"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+        title="iOS Waitlist">
+      </iframe>
     </div>
 
   </div>
