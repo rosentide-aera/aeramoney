@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- Primary SEO -->
-  <title>Aera — Free Budget &amp; Net Worth Tracker | Privacy-First, No Bank Required</title>
-  <meta name="description" content="Track spending, net worth and investments privately — your data stays on your device. No bank connection, no subscriptions, no data selling. Free on Android." />
-  <meta name="keywords" content="budget tracker, expense tracker, net worth tracker app, offline budget app, privacy budgeting app, multi currency expense tracker, free budget app, personal finance app" />
+  <title>Aera — Free Net Worth &amp; Budget Tracker for Android</title>
+  <meta name="description" content="Track net worth, investments, budgets, subscriptions and debts in one app. 30 currencies, physical assets, 13 financial calculators. Free beta on Android. iOS waitlist open." />
+  <meta name="keywords" content="budget tracker, net worth tracker, personal finance app, multi currency expense tracker, free budget app canada, YNAB alternative, Mint alternative, investment tracker, financial calculator app, physical asset tracker" />
   <link rel="canonical" href="https://aeramoney.com/" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#0D1F07" />
@@ -15,16 +15,16 @@
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Aera — Free Budget &amp; Net Worth Tracker" />
-  <meta property="og:description" content="Your net worth, investments, budgets and goals — in one private app. No bank connection. No data selling. Free on Android." />
+  <meta property="og:title" content="Aera — Free Net Worth &amp; Budget Tracker" />
+  <meta property="og:description" content="Your net worth, investments, budgets and goals — one Android app. 30 currencies, physical assets, 13 calculators. Free beta open." />
   <meta property="og:image" content="https://aeramoney.com/assets/og-image.png" />
   <meta property="og:url" content="https://aeramoney.com/" />
   <meta property="og:site_name" content="Aera" />
 
   <!-- Twitter/X Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Aera — Free Budget &amp; Net Worth Tracker" />
-  <meta name="twitter:description" content="Your net worth, investments, budgets and goals — all private. No bank sync. Free on Android." />
+  <meta name="twitter:title" content="Aera — Free Net Worth &amp; Budget Tracker" />
+  <meta name="twitter:description" content="Your net worth, investments, budgets and goals — one Android app. 30 currencies. Free beta open." />
   <meta name="twitter:image" content="https://aeramoney.com/assets/og-image.png" />
 
   <!-- JSON-LD Structured Data -->
@@ -33,7 +33,7 @@
     "@context": "https://schema.org",
     "@type": ["MobileApplication", "SoftwareApplication"],
     "name": "Aera — Budget & Net Worth Tracker",
-    "description": "Aera is a free, privacy-first personal finance app for Android. Track expenses manually, monitor net worth, watch investments, and manage multiple currencies — all offline with AES-256 encryption. No bank connection required. No data selling.",
+    "description": "Aera is a free personal finance app for Android. Track net worth, investments, budgets, subscriptions, debts, and physical assets. Supports 30 currencies and includes 13 financial calculators. Free beta now open, iOS coming soon.",
     "url": "https://aeramoney.com",
     "downloadUrl": "https://play.google.com/store/apps/details?id=com.aera.android",
     "operatingSystem": "ANDROID",
@@ -80,6 +80,37 @@
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/animations.css" />
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- PostHog Analytics -->
+  <script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="Ir init Br Zr Ci jr $r Lr capture calculateEventProperties Yr register register_once register_for_session unregister unregister_for_session Jr getFeatureFlag getFeatureFlagPayload getFeatureFlagResult isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync Kr identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset setIdentity clearIdentity get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException captureLog startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty Wr zr createPersonProfile setInternalOrTestUser Xr Or en opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing Vr debug ki Gr getPageViewId captureTraceFeedback captureTraceMetric Nr".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_spEY6iob2dCgb6zcDRfm3AjCEf37Je2FFdAJ3RDKhjKt', {
+      api_host: 'https://us.i.posthog.com',
+      defaults: '2026-01-30',
+      person_profiles: 'identified_only',
+      respect_dnt: true,
+      session_recording: {
+        maskAllInputs: true
+      }
+    })
+  </script>
+  <script>
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        var betaBtn = document.querySelector('.btn-primary-green');
+        if (betaBtn) {
+          betaBtn.addEventListener('click', function() {
+            if (window.posthog) {
+              window.posthog.capture('clicked_join_beta', {
+                source_page: window.location.pathname,
+                referrer: document.referrer
+              });
+            }
+          });
+        }
+      }, 1000);
+    });
+  </script>
 </head>
 <body>
 
@@ -154,6 +185,36 @@
       <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#F8F6F1"/>
     </svg>
   </div>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!--  iOS WAITLIST                                               -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="ios-waitlist-section" id="ios-waitlist">
+    <div class="container">
+      <div class="ios-waitlist-inner">
+        <div class="ios-waitlist-text">
+          <p class="section-eyebrow">COMING TO IPHONE</p>
+          <h2 class="section-h2">Aera on iOS.<br>Be the first to know.</h2>
+          <p class="ios-waitlist-subtext">
+            We're building the iPhone version next. Join the waitlist — early signups get priority access and founding member benefits when iOS launches.
+          </p>
+        </div>
+        <div class="ios-waitlist-form">
+          <iframe
+            data-tally-src="https://tally.so/embed/ja9JNx?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+            loading="lazy"
+            width="100%"
+            height="240"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+            title="iOS Waitlist">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script async src="https://tally.so/widgets/embed.js"></script>
 
   <!-- ═══════════════════════════════════════════════════════════ -->
   <!--  FEATURES                                                   -->

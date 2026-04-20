@@ -1,129 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Join Aera</title>
-  <meta name="robots" content="noindex">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>You've been invited to Aera</title>
+  <meta name="description" content="Your friend invited you to try Aera — the free net worth and budget tracker for Android, coming soon to iOS." />
+  <link rel="canonical" href="https://aeramoney.com/join/" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#0D1F07" />
+  <link rel="icon" href="/assets/logo/aera-logo-fg.webp" type="image/webp" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- PostHog Analytics -->
+  <script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="Ir init Br Zr Ci jr $r Lr capture calculateEventProperties Yr register register_once register_for_session unregister unregister_for_session Jr getFeatureFlag getFeatureFlagPayload getFeatureFlagResult isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync Kr identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset setIdentity clearIdentity get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException captureLog startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty Wr zr createPersonProfile setInternalOrTestUser Xr Or en opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing Vr debug ki Gr getPageViewId captureTraceFeedback captureTraceMetric Nr".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_spEY6iob2dCgb6zcDRfm3AjCEf37Je2FFdAJ3RDKhjKt', {api_host: 'https://us.i.posthog.com', defaults: '2026-01-30', person_profiles: 'identified_only', respect_dnt: true})
+  </script>
+
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #0d0d0d;
-      color: #fff;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0D1F07 0%, #1A3314 100%);
+      color: #F8F6F1;
       min-height: 100vh;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 24px;
-    }
-    .container {
+      padding: 2rem 1.5rem;
       text-align: center;
-      max-width: 400px;
     }
-    .logo {
-      font-size: 2rem;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-      background: linear-gradient(135deg, #c084fc, #818cf8);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 8px;
+
+    .join-logo {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 2rem;
     }
-    .tagline {
-      color: #9ca3af;
-      font-size: 0.95rem;
-      margin-bottom: 32px;
+
+    .join-h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.75rem, 5vw, 2.5rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+      max-width: 600px;
     }
-    .cta-btn {
-      display: inline-block;
-      padding: 14px 32px;
-      border-radius: 12px;
-      font-size: 1rem;
+
+    .join-h1 .friend-name {
+      color: #00C853;
+    }
+
+    .join-subtext {
+      font-size: 1.05rem;
+      color: rgba(248, 246, 241, 0.8);
+      max-width: 500px;
+      margin-bottom: 2.5rem;
+      line-height: 1.6;
+    }
+
+    .join-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 2rem;
+      max-width: 500px;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    .join-card h3 {
+      font-size: 1.25rem;
       font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .join-card p {
+      color: rgba(248, 246, 241, 0.7);
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+
+    .btn-join-primary {
+      display: inline-block;
+      background: #00C853;
+      color: #0D1F07;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.875rem 2rem;
+      border-radius: 10px;
       text-decoration: none;
-      transition: opacity 0.2s;
-      margin: 8px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      box-shadow: 0 4px 14px rgba(0, 200, 83, 0.3);
     }
-    .cta-btn:hover { opacity: 0.85; }
-    .btn-android {
-      background: linear-gradient(135deg, #c084fc, #818cf8);
-      color: #fff;
+
+    .btn-join-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 200, 83, 0.45);
     }
-    .btn-ios {
-      background: #1f2937;
-      color: #e5e7eb;
-      border: 1px solid #374151;
+
+    /* Desktop: show both cards side by side */
+    @media (min-width: 820px) {
+      .platform-container {
+        display: flex;
+        gap: 1.5rem;
+        max-width: 900px;
+        width: 100%;
+      }
+
+      .platform-container .join-card {
+        flex: 1;
+      }
     }
-    .btn-desktop {
-      background: #1f2937;
-      color: #e5e7eb;
-      border: 1px solid #374151;
+
+    .join-footer {
+      margin-top: 2.5rem;
+      font-size: 0.85rem;
+      color: rgba(248, 246, 241, 0.5);
     }
-    .note {
-      margin-top: 24px;
-      font-size: 0.8rem;
-      color: #6b7280;
+
+    .join-footer a {
+      color: rgba(248, 246, 241, 0.7);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(248, 246, 241, 0.3);
     }
-    #loading { color: #9ca3af; font-size: 0.9rem; }
+
+    .hidden { display: none !important; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="logo">Aera</div>
-    <p class="tagline">Track your net worth, budgets &amp; investments in one place.</p>
 
-    <!-- JS renders the right button; this is the fallback for no-JS / desktop -->
-    <div id="cta">
-      <p id="loading">Redirecting…</p>
+  <img src="/assets/logo/aera-logo-fg.webp" alt="Aera" class="join-logo" />
+
+  <h1 class="join-h1">
+    <span class="friend-name">Your friend</span> invited you to try Aera.
+  </h1>
+
+  <p class="join-subtext">
+    Aera is the free net worth and budget tracker that brings your whole financial life into one app. Track 30 currencies, physical assets, investments, and more.
+  </p>
+
+  <div class="platform-container">
+
+    <!-- ANDROID CARD -->
+    <div class="join-card" id="android-card">
+      <h3>📱 On Android?</h3>
+      <p>Install Aera from Google Play. Your friend's invite travels with the install — activate the app and they get credit.</p>
+      <a id="android-btn" href="#" class="btn-join-primary">Install on Play Store →</a>
     </div>
 
-    <p class="note" id="ref-note"></p>
+    <!-- iOS CARD -->
+    <div class="join-card" id="ios-card">
+      <h3>🍎 On iPhone?</h3>
+      <p>Aera for iOS is coming soon. Join the waitlist — early signups get priority access when iOS launches.</p>
+      <iframe
+        id="ios-form"
+        data-tally-src="https://tally.so/embed/ja9JNx?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+        loading="lazy"
+        width="100%"
+        height="240"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+        title="iOS Waitlist">
+      </iframe>
+    </div>
+
   </div>
 
+  <p class="join-footer">
+    <a href="/">← Back to aeramoney.com</a>
+  </p>
+
+  <script async src="https://tally.so/widgets/embed.js"></script>
+
   <script>
-    (function () {
-      var ref = new URLSearchParams(location.search).get('ref') || '';
-      var ua = navigator.userAgent.toLowerCase();
-      var ctaDiv = document.getElementById('cta');
-      var refNote = document.getElementById('ref-note');
+    // Read referral code from URL
+    var urlParams = new URLSearchParams(window.location.search);
+    var refCode = urlParams.get('ref') || '';
 
-      if (ref) {
-        refNote.textContent = 'Invite code: ' + ref;
-      }
+    // Detect platform
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    var isAndroid = /android/i.test(userAgent);
+    var isIOS = /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream;
 
-      if (/android/.test(ua)) {
-        // Android: redirect to Play Store with referrer parameter so the Install
-        // Referrer API delivers the ref code to the app on first launch.
-        var playUrl = 'https://play.google.com/store/apps/details?id=com.aera.android'
-          + (ref ? '&referrer=' + encodeURIComponent('ref_code=' + ref) : '');
-        location.replace(playUrl);
-        return;
-      }
+    // Show/hide cards based on platform
+    var androidCard = document.getElementById('android-card');
+    var iosCard = document.getElementById('ios-card');
 
-      if (/iphone|ipad|ipod/.test(ua)) {
-        // iOS: redirect to Tally waitlist (with ref preserved in query string)
-        var tallyUrl = 'https://tally.so/r/ja9JNx' + (ref ? '?ref=' + encodeURIComponent(ref) : '');
-        location.replace(tallyUrl);
-        return;
-      }
+    if (isAndroid) {
+      iosCard.classList.add('hidden');
+    } else if (isIOS) {
+      androidCard.classList.add('hidden');
+    }
+    // Desktop: both cards shown (default)
 
-      // Desktop / unknown: show both CTAs
-      var html = '';
-      if (ref) {
-        var androidUrl = 'https://play.google.com/store/apps/details?id=com.aera.android'
-          + '&referrer=' + encodeURIComponent('ref_code=' + ref);
-        var iosUrl = 'https://tally.so/r/ja9JNx?ref=' + encodeURIComponent(ref);
-        html += '<a class="cta-btn btn-android" href="' + androidUrl + '">Get Aera for Android</a>';
-        html += '<br>';
-        html += '<a class="cta-btn btn-ios" href="' + iosUrl + '">Join iOS Waitlist</a>';
-      } else {
-        html += '<a class="cta-btn btn-android" href="https://play.google.com/store/apps/details?id=com.aera.android">Get Aera for Android</a>';
-        html += '<br>';
-        html += '<a class="cta-btn btn-ios" href="https://tally.so/r/ja9JNx">Join iOS Waitlist</a>';
+    // Build Android install URL with referrer code
+    var androidBtn = document.getElementById('android-btn');
+    if (refCode) {
+      var referrerParam = encodeURIComponent('ref_code=' + refCode);
+      androidBtn.href = 'https://play.google.com/store/apps/details?id=com.aera.android&referrer=' + referrerParam;
+    } else {
+      androidBtn.href = 'https://play.google.com/store/apps/details?id=com.aera.android';
+    }
+
+    // Inject ref code into Tally form URL for iOS waitlist attribution
+    var iosForm = document.getElementById('ios-form');
+    if (refCode && iosForm) {
+      var currentSrc = iosForm.getAttribute('data-tally-src');
+      iosForm.setAttribute('data-tally-src', currentSrc + '&ref=' + encodeURIComponent(refCode));
+    }
+
+    // PostHog tracking
+    if (window.posthog) {
+      window.posthog.capture('referral_link_visited', {
+        ref_code: refCode,
+        platform: isAndroid ? 'android' : isIOS ? 'ios' : 'desktop'
+      });
+    }
+
+    // Track install button click
+    androidBtn.addEventListener('click', function() {
+      if (window.posthog) {
+        window.posthog.capture('referral_install_clicked', { ref_code: refCode });
       }
-      ctaDiv.innerHTML = html;
-    })();
+    });
   </script>
+
 </body>
 </html>
