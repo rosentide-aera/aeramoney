@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Aera</title>
+  <meta name="robots" content="noindex">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0d0d0d;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .container {
+      text-align: center;
+      max-width: 400px;
+    }
+    .logo {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #c084fc, #818cf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 8px;
+    }
+    .tagline {
+      color: #9ca3af;
+      font-size: 0.95rem;
+      margin-bottom: 32px;
+    }
+    .cta-btn {
+      display: inline-block;
+      padding: 14px 32px;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: opacity 0.2s;
+      margin: 8px;
+    }
+    .cta-btn:hover { opacity: 0.85; }
+    .btn-android {
+      background: linear-gradient(135deg, #c084fc, #818cf8);
+      color: #fff;
+    }
+    .btn-ios {
+      background: #1f2937;
+      color: #e5e7eb;
+      border: 1px solid #374151;
+    }
+    .btn-desktop {
+      background: #1f2937;
+      color: #e5e7eb;
+      border: 1px solid #374151;
+    }
+    .note {
+      margin-top: 24px;
+      font-size: 0.8rem;
+      color: #6b7280;
+    }
+    #loading { color: #9ca3af; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">Aera</div>
+    <p class="tagline">Track your net worth, budgets &amp; investments in one place.</p>
+
+    <!-- JS renders the right button; this is the fallback for no-JS / desktop -->
+    <div id="cta">
+      <p id="loading">Redirecting…</p>
+    </div>
+
+    <p class="note" id="ref-note"></p>
+  </div>
+
+  <script>
+    (function () {
+      var ref = new URLSearchParams(location.search).get('ref') || '';
+      var ua = navigator.userAgent.toLowerCase();
+      var ctaDiv = document.getElementById('cta');
+      var refNote = document.getElementById('ref-note');
+
+      if (ref) {
+        refNote.textContent = 'Invite code: ' + ref;
+      }
+
+      if (/android/.test(ua)) {
+        // Android: redirect to Play Store with referrer parameter so the Install
+        // Referrer API delivers the ref code to the app on first launch.
+        var playUrl = 'https://play.google.com/store/apps/details?id=com.aera.android'
+          + (ref ? '&referrer=' + encodeURIComponent('ref_code=' + ref) : '');
+        location.replace(playUrl);
+        return;
+      }
+
+      if (/iphone|ipad|ipod/.test(ua)) {
+        // iOS: redirect to Tally waitlist (with ref preserved in query string)
+        var tallyUrl = 'https://tally.so/r/ja9JNx' + (ref ? '?ref=' + encodeURIComponent(ref) : '');
+        location.replace(tallyUrl);
+        return;
+      }
+
+      // Desktop / unknown: show both CTAs
+      var html = '';
+      if (ref) {
+        var androidUrl = 'https://play.google.com/store/apps/details?id=com.aera.android'
+          + '&referrer=' + encodeURIComponent('ref_code=' + ref);
+        var iosUrl = 'https://tally.so/r/ja9JNx?ref=' + encodeURIComponent(ref);
+        html += '<a class="cta-btn btn-android" href="' + androidUrl + '">Get Aera for Android</a>';
+        html += '<br>';
+        html += '<a class="cta-btn btn-ios" href="' + iosUrl + '">Join iOS Waitlist</a>';
+      } else {
+        html += '<a class="cta-btn btn-android" href="https://play.google.com/store/apps/details?id=com.aera.android">Get Aera for Android</a>';
+        html += '<br>';
+        html += '<a class="cta-btn btn-ios" href="https://tally.so/r/ja9JNx">Join iOS Waitlist</a>';
+      }
+      ctaDiv.innerHTML = html;
+    })();
+  </script>
+</body>
+</html>
