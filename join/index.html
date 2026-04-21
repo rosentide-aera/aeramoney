@@ -192,25 +192,39 @@
     var isAndroid = /android/i.test(userAgent);
     var isIOS = /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream;
 
-    // Show/hide cards based on platform
+    // Build Play Store URL — referrer param carries the ref code for Install Referrer API
+    var playStoreUrl = refCode
+      ? 'https://play.google.com/store/apps/details?id=com.aera.android&referrer=' + encodeURIComponent('ref_code=' + refCode)
+      : 'https://play.google.com/store/apps/details?id=com.aera.android';
+
+    // PostHog: fire visit event before any redirect so it's always captured
+    if (window.posthog) {
+      window.posthog.capture('referral_link_visited', {
+        ref_code: refCode,
+        platform: isAndroid ? 'android' : isIOS ? 'ios' : 'desktop'
+      });
+    }
+
+    // Android: skip the page entirely — redirect straight to Play Store
+    // ref_code travels in the referrer param; Install Referrer API reads it on first app open
+    if (isAndroid) {
+      if (window.posthog) {
+        window.posthog.capture('referral_install_clicked', { ref_code: refCode, auto_redirect: true });
+      }
+      window.location.href = playStoreUrl;
+    }
+
+    // iOS / Desktop: show the appropriate card(s)
     var androidCard = document.getElementById('android-card');
     var iosCard = document.getElementById('ios-card');
-
-    if (isAndroid) {
-      iosCard.classList.add('hidden');
-    } else if (isIOS) {
+    if (isIOS) {
       androidCard.classList.add('hidden');
     }
-    // Desktop: both cards shown (default)
+    // Desktop: both cards visible (default)
 
-    // Build Android install URL with referrer code
+    // Wire Android button URL (desktop fallback; also acts as safety net if redirect stalls)
     var androidBtn = document.getElementById('android-btn');
-    if (refCode) {
-      var referrerParam = encodeURIComponent('ref_code=' + refCode);
-      androidBtn.href = 'https://play.google.com/store/apps/details?id=com.aera.android&referrer=' + referrerParam;
-    } else {
-      androidBtn.href = 'https://play.google.com/store/apps/details?id=com.aera.android';
-    }
+    androidBtn.href = playStoreUrl;
 
     // Inject ref code into Tally form URL for iOS waitlist attribution
     var iosForm = document.getElementById('ios-form');
@@ -219,18 +233,10 @@
       iosForm.setAttribute('data-tally-src', currentSrc + '&ref=' + encodeURIComponent(refCode));
     }
 
-    // PostHog tracking
-    if (window.posthog) {
-      window.posthog.capture('referral_link_visited', {
-        ref_code: refCode,
-        platform: isAndroid ? 'android' : isIOS ? 'ios' : 'desktop'
-      });
-    }
-
-    // Track install button click
+    // Track manual button click (desktop users; Android never reaches here)
     androidBtn.addEventListener('click', function() {
       if (window.posthog) {
-        window.posthog.capture('referral_install_clicked', { ref_code: refCode });
+        window.posthog.capture('referral_install_clicked', { ref_code: refCode, auto_redirect: false });
       }
     });
   </script>
